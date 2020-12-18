@@ -5,7 +5,7 @@
   --accent-color: #2196f3;
 }
 body {
-  background-color: #e5e5e5;
+  background-color: #ffffff;
   color: var(--primary-text-color);
   font-family: Roboto, sans-serif;
 }
@@ -34,6 +34,9 @@ letter-spacing: 0.03em;
 /* --------------------------Шапка сайту------------------------ */ 
 header {
 background-color: var(--primary-white-color);
+border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color:#ECECEC;
 }
 .container{
   width: 1200px;
@@ -113,17 +116,21 @@ background-color: #2f303a;
 text-align: center;
 letter-spacing: 0.06em
 }
+.hero .container{
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
 .hero-title {
-margin-bottom: 40px;
-
-  color: var(--primary-white-color);
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  text-transform: uppercase;
+margin-bottom: 30px;
+color: var(--primary-white-color);
+font-weight: 900;
+font-size: 44px;
+line-height: 1.36;
+text-transform: uppercase;
 }
 .hero-button{
-margin-bottom: 40px;
+padding: 10px 32px;
+margin-bottom: 10px;
 
 background-color: #2196F3;
 color:var(--primary-white-color);
@@ -190,8 +197,6 @@ background-color:#F5F4FA;
 padding-top: 94px;
 }
 .team-section .name{
-margin-top: 30px;
-
 color: var(--title-text-color);
 font-weight: 500;
 font-size: 16px;
@@ -201,7 +206,6 @@ letter-spacing: 0.03em;
 }
 .team-section .position{
 margin-top: 10px;
-
 font-size: 16px;
 line-height: 1.19;
 text-align: center;
@@ -209,7 +213,7 @@ letter-spacing: 0.03em;
 }
 .team-list{
 display:flex;
-width: calc((100%-90px)/4);
+display-basis: calc((100%-90px)/4);
 padding-bottom: 94px;
 }
 .team-list .item:not(:last-child){
@@ -218,7 +222,11 @@ margin-right: 30px;
 .team-card{ 
 width-max: 270 ;
 padding-bottom: 30px;
+padding-top: 30px;
 background-color:#ffffff;
+box-sizing: border-box;
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 0px 0px 4px 4px;
 }
 
 /* ----------------------   Підвал --------------------*/
@@ -274,19 +282,26 @@ background-color: #2196F3;
 box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 border-radius: 4px;
 }
+.card-image{
+display:block;
+max-width: 100%;
+height: auto;
+}
 .portfolio-list{
 display:flex;
 flex-wrap: wrap;
+margin-left: -30px; 
+margin-top: -30px;
+padding-bottom: 94px;
 }
 .portfolio-list .item{
-  width: calc((100%-60px)/3);
- 
+margin-left: 30px; 
+margin-top: 30px;
+flex-basis: calc(100% / 3 - 60px);
 }
-.portfolio-list .item:not(:last-child){
-  margin-right: 30px;
-}
-
 .portfolio-list h2{
+margin-bottom: 4px;
+text-align: left;
 color: var(--title-text-color);
 font-weight:700;
 font-size: 18px;
@@ -295,6 +310,7 @@ letter-spacing: 0.06em;
 }
 .portfolio-list a{
   text-decoration: none;
+  margin:0;
 
 }
 .portfolio-list p{
@@ -303,13 +319,27 @@ font-size: 16px;
 line-height: 1.67;
 letter-spacing: 0.03em;
 }
-.portfolio-list .item{
-background: #FFFFFF;
-border: 1px solid #EEEEEE;
+.card-content{
+width: 370px;
 box-sizing: border-box;
-}
-.portfolio-card{
+padding-top: 20px;
+padding-right:24px;
+padding-bottom: 20px;
+padding-left:24px;
+background: #FFFFFF;
 
+ border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #EEEEEE;
 
+  /* Установит стили нинжней рамки */
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #EEEEEE;
+
+  /* Установит стили левой рамки */
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color:#EEEEEE;
 
 }
